@@ -1,0 +1,121 @@
+html, body {
+  height: 100%;
+  background-color: #e9eaed;
+  font-family: helvetica, arial, sans-serif;
+}
+
+table, div.issues {
+  width: 98%;
+  left: 1%;
+  position: relative;
+}
+
+div.issues {
+  margin-top: 0.3em;
+  font-size: 0.8em;
+}
+
+.canvas {
+  background-color: white;
+  border-collapse: collapse;
+  font-size: 12px;
+  min-height: 80%;
+}
+
+.canvas .toprow {
+  width: 20%;
+}
+
+.canvas td {
+  border: 1px solid black;
+  vertical-align: top;
+  -webkit-font-smoothing: antialiased;
+  padding: 1em;
+}
+
+.canvas h2 {
+  font-family: Times New Roman;
+  font-size: 1.5em;
+  text-transform: capitalize;
+  font-style: italic;
+  margin-top: 0;
+}
+
+.canvas li {
+  font-size: 1.4em;
+  padding-bottom: 0.4em;
+}
+
+.canvas .tips {
+  padding-left: 2em;
+  padding-right: 2em;
+  background-color: #eee;
+  border: 1px solid #999;
+}
+
+.canvas .tips ul {
+  padding-left: 0;
+}
+
+.canvas .tips li {
+  font-size: 1em;
+  color: #999;
+  list-style: none;
+}
+
+.canvas .tips .extra h2 {
+  font-size: 1em;
+  margin-bottom: 0;
+}
+.canvas .tips .extra ul {
+  margin-top: 0;
+}
+
+
+.heading {
+  margin-bottom: 1em;
+}
+
+.heading h1 {
+  font-family: Times New Roman;
+  font-size: 2em;
+  text-transform: capitalize;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 0;
+  white-space: nowrap;
+  padding-right: 1em;
+}
+
+.heading label {
+  text-transform: capitalize;
+}
+
+.heading td.input {
+  background-color: white;
+  width: 20%;
+  position: relative;
+  padding-top: 0.5em;
+}
+
+.heading td.input label {
+  font-size: 0.5em;
+  position: absolute;
+  left: 0.3em;
+  top: 0.3em;
+}
+
+.heading td.input span {
+  font-size: 0.8em;
+}
+
+.hide {
+  display: none;
+}
+
+.tips {
+  display: none;
+}
+.showtips .tips {
+  display: inherit;
+}
