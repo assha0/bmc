@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>guyirvine.com</title>
+  <title>guyirvine.com - Value Proposition Canvas</title>
 
   <link rel="stylesheet" type="text/css" href="main.css" media="all" />
 
@@ -10,7 +10,7 @@
   <script src="bower_components/underscore/underscore-min.js"></script>
   <script src="bower_components/moment/min/moment.min.js"></script>
 
-  <script src="js/viewmodel.js"></script>
+  <script src="js/viewmodel_vpc.js"></script>
 
   <style>
     div.control-panel {
@@ -39,7 +39,7 @@
 
   <table class='heading'>
     <tr>
-      <td><h1>the business model canvas</h1></td>
+      <td><h1>the value proposition canvas</h1></td>
       <td class='input'>
         <label>designed for:</label>
         <span data-bind='text: designedfor'></span>
@@ -58,268 +58,130 @@
       </td>
     </tr>
   </table>
-  <table class='canvas'>
-    <tr>
-      <td class='toprow keypartners' rowspan='2' data-bind="click: sectionclick('keypartners')">
-        <h2>key partners</h2>
-        <ul data-bind='foreach: keypartners'>
-          <li data-bind="text: $data"></li>
-        </ul>
-        <div class='tips'>
-          <div class='questions'>
-            <ul>
-              <li>Who are our Key Partners?</li>
-              <li>Who are our Key Suppliers?</li>
-              <li>Which Key Resources are we aquiring from partners?</li>
-              <li>Which Key Activities fo partners Perform?</li>
-            </ul>
-          </div>
-          <div class='extra'>
-            <h2>motivations for partnerships</h2>
-            <ul>
-              <li>Optimisation and economy</li>
-              <li>Reduction of risk and uncertainty</li>
-              <li>Acquisition of particular resources and activities</li>
-            </ul>
-          </div>
-        </div>
-      </td>
-      <td class='toprow keyactivities' data-bind="click: sectionclick('keyactivities')">
-        <h2>key activities</h2>
-        <ul data-bind='foreach: keyactivities'>
-          <li data-bind="text: $data"></li>
-        </ul>
-        <div class='tips'>
-          <div class='questions'>
-            <ul>
-              <li>What Key Activities do our Value Propositions require?</li>
-              <li>Our Distribution Channels?</li>
-              <li>Customer Relationships?</li>
-              <li>Revenue Streams?</li>
-            </ul>
-          </div>
-          <div class='extra'>
-            <h2>Categories</h2>
-            <ul>
-              <li>Production</li>
-              <li>Problem Solving</li>
-              <li>Platform / Network</li>
-            </ul>
-          </div>
-        </div>
-      </td>
-      <td class='toprow valuepropositions' rowspan='2' data-bind="click: sectionclick('valuepropositions')">
-        <h2>value propositions</h2>
-        <ul data-bind='foreach: valuepropositions'>
-          <li data-bind="text: $data"></li>
-        </ul>
-        <div class='tips'>
-          <div class='questions'>
-            <ul>
-              <li>What value do we deliver to the customer?</li>
-              <li>Which one of our customer's problems are we helping to solve?</li>
-              <li>What bundles of products and services are we offering to each Customer Segment?</li>
-              <li>Which customer needs are we satisfying?</li>
-            </ul>
-          </div>
-          <div class='extra'>
-            <h2>characteristics</h2>
-            <ul>
-              <li>Newness</li>
-              <li>Performance</li>
-              <li>Customisation</li>
-              <li>"Getting the Job Done"</li>
-              <li>Design</li>
-              <li>Brand / Status</li>
-              <li>Price</li>
-              <li>Cost Reduction</li>
-              <li>Risk Reduction</li>
-              <li>Accessibility</li>
-              <li>Convenience / Usability</li>
-            </ul>
-          </div>
-        </div>
-      </td>
-      <td class='toprow customerrelationships' data-bind="click: sectionclick('customerrelationships')">
-        <h2>customer relationships</h2>
-        <ul data-bind='foreach: customerrelationships'>
-          <li data-bind="text: $data"></li>
-        </ul>
-        <div class='tips'>
-          <div class='questions'>
-            <ul>
-              <li>What type of relationship does each of our Customer Segments expect us to establish and maintain with them?</li>
-              <li>Which ones have we established?</li>
-              <li>How are they integrated with the rest of our business model?</li>
-              <li>How costly are they?</li>
-            </ul>
-          </div>
-          <div class='extra'>
-            <h2>examples</h2>
-            <ul>
-              <li>Personal assistance</li>
-              <li>Dedicated Personal Assistance</li>
-              <li>Self-Service</li>
-              <li>Automated Services</li>
-              <li>Communities</li>
-              <li>Co-creation</li>
-            </ul>
-          </div>
-        </div>
-      </td>
-      <td class='toprow customersegments' rowspan='2' data-bind="click: sectionclick('customersegments')">
-        <h2>customer segments</h2>
-        <ul data-bind='foreach: customersegments'>
-          <li data-bind="text: $data"></li>
-        </ul>
-        <div class='tips'>
-          <div class='questions'>
-            <ul>
-              <li>For whom are we creating value?</li>
-              <li>Who are our most important customers?</li>
-            </ul>
-          </div>
-          <div class='extra'>
-            <h2></h2>
-            <ul>
-              <li>Mass Market</li>
-              <li>Niche Market</li>
-              <li>Segmented</li>
-              <li>Diversified</li>
-              <li>Multi-sided Platform</li>
-            </ul>
-          </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td class='keyresources' data-bind="click: sectionclick('keyresources')">
-        <h2>key resources</h2>
-        <ul data-bind='foreach: keyresources'>
-          <li data-bind="text: $data"></li>
-        </ul>
-        <div class='tips'>
-          <div class='questions'>
-            <ul>
-              <li>What Key Resources do our Value Propositions require?</li>
-              <li>Our Distribution Channels? Customer Relationships? Revenue Streams?</li>
-            </ul>
-          </div>
-          <div class='extra'>
-            <h2>types of resources</h2>
-            <ul>
-              <li>Physical</li>
-              <li>Intellectual ( brand patents, copyrights, data )</li>
-              <li>Human</li>
-              <li>Financial</li>
-            </ul>
-          </div>
-        </div>
-      </td>
-      <td class='channels' data-bind="click: sectionclick('channels')">
-        <h2>channels</h2>
-        <ul data-bind='foreach: channels'>
-          <li data-bind="text: $data"></li>
-        </ul>
-        <div class='tips'>
-          <div class='questions'>
-            <ul>
-              <li>Through which Channels do our Customer Segments want to be reached?</li>
-              <li>How are we reaching them now?</li>
-              <li>How are our Channels integrated?</li>
-              <li>Which ones work best?</li>
-              <li>Which ones are most cost-efficient?</li>
-              <li>How are we integating them with customer routines?</li>
-            </ul>
-          </div>
-          <div class='extra'>
-            <h2>channel phases</h2>
-            <ul>
-              <li>1. Awareness - How do we raise awareness of our company's products and services?</li>
-              <li>2. Evaluation - How do we help customers evaluate our organisations Value Proposition?</li>
-              <li>3. Purchase - How do we allow customers to purchase specific products and services?</li>
-              <li>4. Delivery - How do we deliver a Value Proposition to customers?</li>
-              <li>5. After Sales - How do we provide post-purchase customer service?</li>
-            </ul>
-          </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td class='coststructure' colspan='3' data-bind="click: sectionclick('coststructure')">
-        <h2>cost structure</h2>
-        <ul data-bind='foreach: coststructure'>
-          <li data-bind="text: $data"></li>
-        </ul>
-        <div class='tips'>
-          <div class='questions'>
-            <ul>
-              <li>What are the most important costs inherent in our business model?</li>
-              <li>Which Key Resources are most expensive?</li>
-              <li>Which Key Activities are most expensive?</li>
-            </ul>
-          </div>
-          <div class='extra'>
-            <h2>Is your business more:</h2>
-            <ul>
-              <li>Cost Driven (leanest cost structure, low price value proposition, maximum automation, extensive outsourcing)</li>
-              <li>Value Driven (focused on value creation, premium value proposition)</li>
-            </ul>
-            <h2>Sample Characteristics:</h2>
-            <ul>
-              <li>Fixed Costs (salaries, rents, utilities)</li>
-              <li>Variable costs</li>
-              <li>Economies of Scale</li>
-              <li>Economies of scope</li>
-            </ul>
-          </div>
-        </div>
-      </td>
-      <td class='revenuestreams' colspan='2' data-bind="click: sectionclick('revenuestreams')">
-        <h2>revenue streams</h2>
-        <ul data-bind='foreach: revenuestreams'>
-          <li data-bind="text: $data"></li>
-        </ul>
-        <div class='tips'>
-          <div class='questions'>
-            <ul>
-              <li>For what value are our customers really willing to pay?</li>
-              <li>For what do they currently pay?</li>
-              <li>How are they currently paying?</li>
-              <li>How would they prefer to pay?</li>
-              <li>How much does each Revenue Stream contribute to overall revenues?</li>
-            </ul>
-          </div>
-          <div class='extra'>
-            <h2>Types:</h2>
-            <ul>
-              <li>Asset sale</li>
-              <li>Usage fee</li>
-              <li>Subscription fees</li>
-              <li>Lending / Renting / Leasing</li>
-              <li>Licensing</li>
-              <li>Brokerage fees</li>
-              <li>Advertising</li>
-            </ul>
-            <h2>Fixed Pricing:</h2>
-            <ul>
-              <li>List Price</li>
-              <li>Product feature dependent</li>
-              <li>Customer segment dependent</li>
-              <li>Volume dependent</li>
-            </ul>
-            <h2>Dynamic Pricing:</h2>
-            <ul>
-              <li>Negotiation (bargaining)</li>
-              <li>Yield Management</li>
-              <li>Real-time Market</li>
-            </ul>
-          </div>
-        </div>
-      </td>
-    </tr>
+  <style>
+  /*
+    .valuepropositioncanvas {
+      position: relative;
+    }
+    .vpc-block {
+      top: 5%;
+      height: 85%;
+      position: absolute;
+      width: 40%;
+      display: inline-block;
+      padding: 1%;
+    }
 
-  </table>
+    .valuepropositions {
+      left: 5%;
+      border: 1px solid rgb(53,86,11);
+      background-color: rgb(211,220,197);
+    }
+    .valuepropositions h2 {
+      color: rgb(53,86,11);
+    }
+    .customersegments {
+      right: 5%;
+      border: 1px solid rgb(160,39,46);
+      background-color: rgb(238,207,206);
+    }
+    .customersegments h2 {
+      color: rgb(160,39,46);
+    }
+
+    */
+    .valuepropositioncanvas {
+      background-image: url("value_proposition_canvas_blank.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      position: relative;
+    }
+
+    .vpc-element {
+      position: absolute;
+    }
+
+    .productsandservices {
+      top: 43%;
+      left: 5%;
+    }
+    .gaincreators {
+      top: 15%;
+      left: 35%;
+    }
+    .painrelievers {
+      top: 60%;
+      left: 35%;
+    }
+
+    .gains {
+      left: 65%;
+      top: 15%;
+    }
+    .pains {
+      left: 65%;
+      top: 60%;
+    }
+    .customerjobs {
+      top: 43%;
+      left: 85%;
+    }
+    body, .vpc-element h2 {
+      font-family: Chalkboard;
+    }
+    .vpc-element h2 {
+    }
+
+    .vpc-element ul {
+      padding-left: 0;
+    }
+
+    .vpc-element li {
+      list-style: none;
+    }
+
+  </style>
+
+  <div class='valuepropositioncanvas canvas'>
+      <div class='productsandservices valuepropositions vpc-element'>
+        <h2>products and services</h2>
+        <ul data-bind='foreach: productsandservices'>
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+      <div class='gaincreators valuepropositions vpc-element'>
+        <h2>gain creators</h2>
+        <ul data-bind='foreach: gaincreators'>
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+      <div class='painrelievers valuepropositions vpc-element'>
+        <h2>pain relievers</h2>
+        <ul data-bind='foreach: painrelievers'>
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+
+      <div class='gains customersegments vpc-element'>
+        <h2>gains</h2>
+        <ul data-bind='foreach: gains'>
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+      <div class='pains customersegments vpc-element'>
+        <h2>pains</h2>
+        <ul data-bind='foreach: pains'>
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+      <div class='customerjobs customersegments vpc-element'>
+        <h2>customer jobs</h2>
+        <ul data-bind='foreach: customerjobs'>
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
+  </div>
 
   <div class='control-panel'>
     <div class='issues' data-bind='text: issues_fmt'></div>
