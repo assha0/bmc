@@ -59,91 +59,51 @@
     </tr>
   </table>
   <style>
-  /*
-    .valuepropositioncanvas {
-      position: relative;
-    }
-    .vpc-block {
-      top: 5%;
-      height: 85%;
-      position: absolute;
-      width: 40%;
+    .column {
       display: inline-block;
-      padding: 1%;
+      vertical-align: top;
+      width: 25%;
+      padding-top: 1%;
+      padding-left: 2%;
     }
-
-    .valuepropositions {
-      left: 5%;
-      border: 1px solid rgb(53,86,11);
-      background-color: rgb(211,220,197);
+    img {
+      width: 45%;
     }
     .valuepropositions h2 {
-      color: rgb(53,86,11);
-    }
-    .customersegments {
-      right: 5%;
-      border: 1px solid rgb(160,39,46);
-      background-color: rgb(238,207,206);
+	    color: rgb(53,86,11);
     }
     .customersegments h2 {
       color: rgb(160,39,46);
     }
 
-    */
-    .valuepropositioncanvas {
-      background-image: url("value_proposition_canvas_blank.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-
-      position: relative;
+    .valuepropositioncanvas h2 {
+      text-decoration: underline;
+      margin-bottom: 0.3em;
     }
 
-    .vpc-element {
-      position: absolute;
-    }
-
-    .productsandservices {
-      top: 43%;
-      left: 5%;
-    }
-    .gaincreators {
-      top: 15%;
-      left: 35%;
-    }
-    .painrelievers {
-      top: 60%;
-      left: 35%;
-    }
-
-    .gains {
-      left: 65%;
-      top: 15%;
-    }
-    .pains {
-      left: 65%;
-      top: 60%;
-    }
-    .customerjobs {
-      top: 43%;
-      left: 85%;
-    }
     body, .vpc-element h2 {
       font-family: Chalkboard;
     }
-    .vpc-element h2 {
+    .vpc-element {
+      display: block;
+      vertical-align: top;
+      padding-bottom: 5%;
     }
 
     .vpc-element ul {
-      padding-left: 0;
+    padding-left: 0;
+    margin-top: 0;
     }
 
     .vpc-element li {
       list-style: none;
+
     }
 
   </style>
 
   <div class='valuepropositioncanvas canvas'>
+    <div class='valuepropositions column'>
       <div class='productsandservices valuepropositions vpc-element'>
         <h2>products and services</h2>
         <ul data-bind='foreach: productsandservices'>
@@ -162,7 +122,17 @@
           <li data-bind="text: $data"></li>
         </ul>
       </div>
+    </div>
 
+      <img src="value-proposition-canvas.png">
+
+    <div class='customersegments column'>
+      <div class='customerjobs customersegments vpc-element'>
+        <h2>customer jobs</h2>
+        <ul data-bind='foreach: customerjobs'>
+          <li data-bind="text: $data"></li>
+        </ul>
+      </div>
       <div class='gains customersegments vpc-element'>
         <h2>gains</h2>
         <ul data-bind='foreach: gains'>
@@ -175,12 +145,7 @@
           <li data-bind="text: $data"></li>
         </ul>
       </div>
-      <div class='customerjobs customersegments vpc-element'>
-        <h2>customer jobs</h2>
-        <ul data-bind='foreach: customerjobs'>
-          <li data-bind="text: $data"></li>
-        </ul>
-      </div>
+    </div>
   </div>
 
   <div class='control-panel'>
