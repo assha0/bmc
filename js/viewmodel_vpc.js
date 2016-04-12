@@ -19,7 +19,7 @@ function ViewModel() {
         var d = Date.parse(self.datecreated());
         if (isNaN(d)) { return ""; }
 
-        return moment(d).format("d MMM YYYY");
+        return moment(d).format("D MMM YYYY");
     });
     self.iteration = ko.observable();
 
