@@ -69,8 +69,12 @@
       padding-top: 1%;
       padding-left: 2%;
     }
-    img {
+    .images-column {
       width: 45%;
+      display: inline-block;
+    }
+    img {
+      width: 100%;
     }
     .valuepropositions h2 {
 	    color: rgb(53,86,11);
@@ -104,6 +108,19 @@
       padding: 1em;
     }
 
+    .images-column .value-proposition-canvas {
+      display: inherit;
+    }
+    .images-column .product-value {
+      display: none;
+    }
+
+    .show-product-value .value-proposition-canvas {
+      display: none;
+    }
+    .show-product-value .product-value {
+      display: inherit;
+    }
   </style>
 
   <div class='valuepropositioncanvas canvas'>
@@ -137,7 +154,10 @@
       </div>
     </div>
 
-      <img src="value-proposition-canvas.png">
+    <div class='images-column' data-bind='click: toggle_image'>
+      <img class='value-proposition-canvas' src="value-proposition-canvas.png">
+      <img class='product-value' src="product_value.jpg">
+    </div>
 
     <div class='customersegments column'>
       <div class='customerjobs vpc-element' data-bind="click: sectionclick('customerjobs')">

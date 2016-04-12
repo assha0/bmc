@@ -39,6 +39,10 @@ function ViewModel() {
         $("." + css).toggleClass("showtips");
     };
 
+    self.toggle_image = function () {
+        $(".images-column").toggleClass('show-product-value');
+    };
+
     self.load = function (obj) {
         _.each(Object.keys(obj), function (property_name) {
             if (vm.hasOwnProperty(property_name)) {
