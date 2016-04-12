@@ -88,62 +88,81 @@
       display: block;
       vertical-align: top;
       padding-bottom: 5%;
+      cursor: pointer;
     }
 
     .vpc-element ul {
-    padding-left: 0;
-    margin-top: 0;
+      padding-left: 0;
+      margin-top: 0;
     }
 
-    .vpc-element li {
-      list-style: none;
-
+    .vpc-element .tips {
+      font-size: 1.2em;
+      padding: 1em;
     }
 
   </style>
 
   <div class='valuepropositioncanvas canvas'>
     <div class='valuepropositions column'>
-      <div class='productsandservices valuepropositions vpc-element'>
+      <div class='productsandservices valuepropositions vpc-element' data-bind="click: sectionclick('productsandservices')">
         <h2>products and services</h2>
         <ul data-bind='foreach: productsandservices'>
           <li data-bind="text: $data"></li>
         </ul>
+        <div class='tips'>
+          List all the products and services which your value proposition is build around. This includes for example the services that you offer or the help the customer receives either a functional, social, or emotional.
+        </div>
       </div>
-      <div class='gaincreators valuepropositions vpc-element'>
+      <div class='gaincreators valuepropositions vpc-element' data-bind="click: sectionclick('gaincreators')">
         <h2>gain creators</h2>
         <ul data-bind='foreach: gaincreators'>
           <li data-bind="text: $data"></li>
         </ul>
+        <div class='tips'>
+          Describe how your product creates customer gain, how it offers an added value to your customer.
+        </div>
       </div>
-      <div class='painrelievers valuepropositions vpc-element'>
+      <div class='painrelievers valuepropositions vpc-element' data-bind="click: sectionclick('painrelievers')">
         <h2>pain relievers</h2>
         <ul data-bind='foreach: painrelievers'>
           <li data-bind="text: $data"></li>
         </ul>
+        <div class='tips'>
+          Describe how your products addresses the challenges needs and the pains of the customer, how you eliminate negative emotions, undesired costs or avoidable situations.
+        </div>
       </div>
     </div>
 
       <img src="value-proposition-canvas.png">
 
     <div class='customersegments column'>
-      <div class='customerjobs customersegments vpc-element'>
+      <div class='customerjobs vpc-element' data-bind="click: sectionclick('customerjobs')">
         <h2>customer jobs</h2>
         <ul data-bind='foreach: customerjobs'>
           <li data-bind="text: $data"></li>
         </ul>
+        <div class='tips'>
+          Gather all the customer needs, the problems that they are trying to solve and the tasks they are trying to perform or complete
+        </div>
       </div>
-      <div class='gains customersegments vpc-element'>
+      <div class='gains vpc-element' data-bind="click: sectionclick('gains')">
         <h2>gains</h2>
         <ul data-bind='foreach: gains'>
           <li data-bind="text: $data"></li>
         </ul>
+        <div class='tips'>
+          Gather all the customers benefits and desires, and may span personal, functional, or economical etc. For example, this box could include positive emotions, functional requirements, or specific cost savings.
+        </div>
       </div>
-      <div class='pains customersegments vpc-element'>
+      <div class='pains vpc-element' data-bind="click: sectionclick('pains')">
         <h2>pains</h2>
         <ul data-bind='foreach: pains'>
           <li data-bind="text: $data"></li>
         </ul>
+        <div class='tips'>
+          Gather all the negative emotions and undesired costs, situations and risk which the customer could experience before, during and after getting the job is done
+        </div>
       </div>
     </div>
   </div>
@@ -159,7 +178,7 @@
 <script>
 var vm = new ViewModel();
 ko.applyBindings(vm);
-$('table.canvas td').removeClass('showtips');
+$('div.vpc-element').removeClass('showtips');
 </script>
 
 </html>
