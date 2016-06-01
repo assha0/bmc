@@ -4,7 +4,7 @@ html, body {
   font-family: helvetica, arial, sans-serif;
 }
 
-table, div.issues {
+.canvas, div.issues, table.heading {
   width: 98%;
   left: 1%;
   position: relative;
@@ -118,4 +118,14 @@ div.issues {
 }
 .showtips .tips {
   display: inherit;
+}
+
+.control-panel {
+  position: relative;
+  width: 98%;
+  left: 1%;
+}
+.control-panel a {
+  position: absolute;
+  right: 0;
 }
